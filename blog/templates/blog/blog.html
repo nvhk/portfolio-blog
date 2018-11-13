@@ -56,10 +56,10 @@
 
             <div class="blog-post">
               <img src="{{ blog.obrazekbloga.url }}" class="img-fluid" alt="{{ blog.tytul }}">
-              <h2 class="blog-post-title">{{ blog.tytul }}</h2>
+              <h2 class="blog-post-title"><a href="">{{ blog.tytul }}</a></h2>
               <p class="blog-post-meta">{{ blog.data }}</p>
 
-              <p>{{ blog.tekst }}</p>
+              <p>{{ blog.skrotTekstu }}...</p>
               <hr class="col-xs-12">
 
             {% endfor %}
