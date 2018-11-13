@@ -1,10 +1,90 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Bolog Page</title>
-  </head>
-  <body>
-    <h2>Helluwa Blog</h2>
-  </body>
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="icon" href="../../../../favicon.ico">
+
+  <title>Album example for Bootstrap</title>
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">RV Blog</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav ml-auto">
+          <a class="nav-item nav-link active" href="#">Blog<span class="sr-only">(current)</span></a>
+          <a class="nav-item nav-link" href="#">Linkedin</a>
+          <a class="nav-item nav-link" href="#">Github</a>
+        </div>
+      </div>
+      </nav
+  </header>
+
+  <main role="main">
+
+    <section class="jumbotron text-center">
+      <div class="container">S
+        <h1 class="jumbotron-heading">Witanko uszanowanko</h1>
+        <p class="lead text-muted">Przykladowy tekst z jakąś mądrością ale nie chce mi się wymyslac, wiec zostawie tak jak jest zeby zobaczyc czy sie skaluje</p>
+        <p>
+          <a href="mailto:danielmagical@rafonix.rafatus" class="btn btn-primary my-2">Nie wysylaj mi maili, to tylko przycisk</a>
+        </p>
+      </div>
+    </section>
+
+      <div class="container">
+
+        <div class="row">
+
+          <div class="blog-main">
+            <h3 class="pb-3 mb-4 font-italic border-bottom">Najnowsze posty</h3>
+
+              {% for blog in blogi.all %}
+
+            <div class="blog-post">
+              <img src="{{ blog.obrazekbloga.url }}" class="img-fluid" alt="{{ blog.tytul }}">
+              <h2 class="blog-post-title">{{ blog.tytul }}</h2>
+              <p class="blog-post-meta">{{ blog.data }}</p>
+
+              <p>{{ blog.tekst }}</p>
+              <hr class="col-xs-12">
+
+            {% endfor %}
+
+            <nav class="blog-pagination">
+              <a class="btn btn-outline-primary" href="#">Starsze</a>
+              <a class="btn btn-outline-secondary disabled" href="#">Nowsze</a>
+            </nav>
+
+          </div>
+    </div>
+</div>
+  </main>
+<hr class="col-xs-12">
+  <footer class="text-muted">
+    <div class="container text-center">
+      <p>Sprawdzam jak działa wyswietlanie daty: {% now "M Y" %}</p>
+  </footer>
+
+  <!-- Bootstrap core JavaScript
+    ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+
 </html>
