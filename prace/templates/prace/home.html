@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en">
-
+{% load staticfiles %}
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -26,7 +26,7 @@
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav ml-auto">
           <a class="nav-item nav-link" href="#">Blog<span class="sr-only">(current)</span></a>
-          <a class="nav-item nav-link" href="#">Linkedin</a>
+          <a class="nav-item nav-link" href="{% static 'fortuna.jpg' %}">Linkedin</a>
           <a class="nav-item nav-link" href="#">Github</a>
         </div>
       </div>
@@ -42,6 +42,7 @@
         <p>
           <a href="mailto:danielmagical@rafonix.rafatus" class="btn btn-primary my-2">Nie wysylaj mi maili, to tylko przycisk</a>
         </p>
+        <img src="{% static 'goha.png' %}" alt="Goha">
       </div>
     </section>
     <div class="album py-3 bg-light">
